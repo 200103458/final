@@ -96,9 +96,9 @@
                         <h2 class="section__title about__title">More Information <br> About The Rixos Otel</h2>
                         <p class="about__description">You can find the most beautiful and pleasant places at the best 
                             prices with special discounts, you choose the place we will guide you all the way to wait, get your 
-                            place now.
+                            place now.<span id="dots">..</span><span id="more" style="display: none;"> Rixos Water World Aktau with bright energy all year round. Rixy Kids Club is an ideal world created especially for young guests. Parents will be able to relax and unwind, knowing that children are having fun, enjoying the best holidays imaginable. The combination of amazing amenities and furnishings, as well as fine cuisine makes Rixos Water World Aktau a unique luxury family resort, and the convenient location 20 km from Aktau city and 49 km from Aktau Airport is another advantage."</span>
                         </p>
-                        <a href="#" class="button">Full Info</a>
+                        <button onclick="more()" id="myBtn" class="button">Full Info</button>
                     </div>
 
                     <div class="about__img">
@@ -112,6 +112,24 @@
                     </div>
                 </div>
             </section>
+            
+            <script>
+            function more() {
+              var dots = document.getElementById("dots");
+              var moreText = document.getElementById("more");
+              var btnText = document.getElementById("myBtn");
+
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Full Info"; 
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+              }
+            }
+            </script>
             
            <section class="discover section" id="discover">
                 <h2 class="section__title">Discover the most <br> attractive places</h2>
